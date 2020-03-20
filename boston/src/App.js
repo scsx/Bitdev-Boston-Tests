@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Flight from './flight/Flight';
+
 // divider
 import Divider from '@bit/mui-org.material-ui.divider';
 
@@ -64,8 +66,15 @@ function App() {
 
     return (
         <div className="App">
+            <Flight company='TAP'></Flight>
+            
+            <Divider variant="middle"/>
+
             <Typography variant="h1" component="h2" gutterBottom>
                 h1. Heading
+            </Typography>
+            <Typography variant="h1" component="h2">
+                h1. Heading - no gutter
             </Typography>
             <Typography variant="h2" gutterBottom>
                 h2. Heading
@@ -111,7 +120,9 @@ function App() {
             <Typography variant="overline" display="block" gutterBottom>
                 overline text
             </Typography>
+
             <Divider variant="middle"/>
+
             <Paper className={classes.root}>
                 <Table className={classes.table} aria-label="customized table">
                     <TableHead>
